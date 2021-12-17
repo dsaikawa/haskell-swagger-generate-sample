@@ -1,0 +1,54 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "API Version",
+        "title": "API Title"
+    },
+    "paths": {
+        "/users": {
+            "get": {
+                "summary": "path の summary",
+                "description": "path の description",
+                "produces": [
+                    "application/json;charset=utf-8"
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "items": {
+                                "$ref": "#/definitions/User"
+                            },
+                            "type": "array"
+                        },
+                        "description": ""
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "User": {
+            "description": "Swagger の Model の詳細",
+            "required": [
+                "userId"
+            ],
+            "properties": {
+                "userId": {
+                    "type": "integer"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "lastName": "lastname",
+                "userId": 1,
+                "firstName": "firstname"
+            },
+            "type": "object"
+        }
+    }
+}
